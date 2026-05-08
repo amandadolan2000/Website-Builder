@@ -10,333 +10,247 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
-  --coral:#D95F3B;
-  --coral-l:#FCEEE9;
-  --coral-d:#B04A2A;
-  --teal:#0E8C6A;
-  --teal-l:#E0F4EE;
-  --teal-d:#0A6E52;
-  --amber:#D97706;
-  --amber-l:#FEF3CD;
-  --violet:#6D3FC0;
-  --violet-l:#EEE8FF;
-  --sky:#1B80C4;
-  --sky-l:#E3F1FB;
-  --sand:#F5F0E8;
-  --sand-d:#EDE7DB;
-  --ink:#1C1917;
-  --ink-80:rgba(28,25,23,0.8);
-  --ink-50:rgba(28,25,23,0.5);
-  --ink-20:rgba(28,25,23,0.2);
-  --ink-08:rgba(28,25,23,0.08);
+  --orange:#E8611A;
+  --orange-d:#C04E12;
+  --orange-l:#FDF0E8;
+  --orange-m:#F7C8A8;
+  --blue:#1A5FBF;
+  --blue-d:#134A99;
+  --blue-l:#E8F0FC;
+  --blue-m:#A8C0F0;
+  --ink:#0F0E0C;
+  --ink-70:rgba(15,14,12,0.7);
+  --ink-40:rgba(15,14,12,0.4);
+  --ink-15:rgba(15,14,12,0.15);
+  --ink-07:rgba(15,14,12,0.07);
   --white:#FFFFFF;
-  --r:10px;
-  --rl:18px;
+  --off:#F9F7F4;
+  --r:8px;
+  --rl:14px;
   --pill:100px;
 }
 
 html{scroll-behavior:smooth}
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--white);color:var(--ink);
-  font-size:16px;line-height:1.6;
-  overflow-x:hidden;-webkit-font-smoothing:antialiased;
-}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);font-size:15px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
 /* NAV */
-nav{
-  position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--ink-20);
-  padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:62px;
-}
-.nav-logo{font-family:'Lora',serif;font-weight:600;font-size:20px;color:var(--ink);text-decoration:none;letter-spacing:-0.3px}
-.nav-logo em{font-style:normal;color:var(--coral)}
-.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
-.nav-links a{text-decoration:none;color:var(--ink-50);font-size:14px;font-weight:400;transition:color .18s}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--ink-15);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-family:'Lora',serif;font-weight:600;font-size:19px;color:var(--ink);text-decoration:none;letter-spacing:-0.3px}
+.logo em{font-style:normal;color:var(--orange)}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;color:var(--ink-40);font-size:13.5px;font-weight:400;transition:color .15s}
 .nav-links a:hover{color:var(--ink)}
-.nav-btn{background:var(--coral) !important;color:var(--white) !important;padding:9px 20px !important;border-radius:var(--pill);font-size:13px !important;font-weight:500 !important;transition:background .18s !important}
-.nav-btn:hover{background:var(--coral-d) !important}
+.nav-btn{background:var(--orange) !important;color:#fff !important;padding:8px 18px !important;border-radius:var(--pill);font-size:13px !important;font-weight:500 !important;transition:background .15s !important}
+.nav-btn:hover{background:var(--orange-d) !important}
 
 /* HERO */
-.hero-wrap{background:var(--white);border-bottom:1px solid var(--ink-20)}
-.hero{
-  max-width:1080px;margin:0 auto;
-  padding:96px 6% 88px;
-  display:grid;grid-template-columns:1.05fr 0.95fr;
-  gap:72px;align-items:center;
-}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--coral);margin-bottom:22px;
-}
-.eyebrow::before{content:'';display:block;width:20px;height:1.5px;background:var(--coral)}
-.hero h1{
-  font-family:'Lora',serif;
-  font-size:clamp(38px,4.5vw,58px);font-weight:600;
-  line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px;color:var(--ink);
-}
-.hero h1 em{font-style:italic;color:var(--coral)}
-.hero-sub{font-size:17px;color:var(--ink-50);line-height:1.75;margin-bottom:36px;max-width:440px;font-weight:300}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-primary{display:inline-block;text-decoration:none;background:var(--coral);color:var(--white);padding:13px 26px;border-radius:var(--pill);font-size:14px;font-weight:500;transition:background .18s,transform .12s}
-.btn-primary:hover{background:var(--coral-d);transform:translateY(-1px)}
-.btn-outline{display:inline-block;text-decoration:none;border:1.5px solid var(--ink-20);color:var(--ink-80);padding:13px 26px;border-radius:var(--pill);font-size:14px;font-weight:400;transition:border-color .18s,color .18s}
-.btn-outline:hover{border-color:var(--ink-50);color:var(--ink)}
+.hero-wrap{background:var(--off);border-bottom:1px solid var(--ink-15)}
+.hero{max-width:1060px;margin:0 auto;padding:64px 5% 60px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center}
+.ew{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+.ew::before{content:'';width:18px;height:1.5px;background:var(--orange)}
+.hero h1{font-family:'Lora',serif;font-size:clamp(34px,4vw,52px);font-weight:600;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px;color:var(--ink)}
+.hero h1 em{font-style:italic;color:var(--orange)}
+.hero-p{font-size:15.5px;color:var(--ink-70);line-height:1.7;margin-bottom:28px;max-width:420px;font-weight:300}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-fill{display:inline-block;text-decoration:none;background:var(--orange);color:#fff;padding:11px 22px;border-radius:var(--pill);font-size:13.5px;font-weight:500;transition:background .15s,transform .12s}
+.btn-fill:hover{background:var(--orange-d);transform:translateY(-1px)}
+.btn-line{display:inline-block;text-decoration:none;border:1.5px solid var(--ink-15);color:var(--ink-70);padding:11px 22px;border-radius:var(--pill);font-size:13.5px;font-weight:400;transition:border-color .15s,color .15s}
+.btn-line:hover{border-color:var(--ink-40);color:var(--ink)}
 
-/* hero browser */
-.hero-vis{position:relative}
-.browser{background:var(--white);border:1px solid var(--ink-20);border-radius:var(--rl);overflow:hidden;box-shadow:0 24px 64px rgba(28,25,23,0.09),0 4px 16px rgba(28,25,23,0.05)}
-.b-bar{background:var(--sand);border-bottom:1px solid var(--ink-20);padding:10px 16px;display:flex;align-items:center;gap:6px}
-.bd{width:9px;height:9px;border-radius:50%}
-.bd:nth-child(1){background:#FF5F57}
-.bd:nth-child(2){background:#FFBD2E}
-.bd:nth-child(3){background:#28CA41}
-.b-url{flex:1;margin-left:10px;background:rgba(255,255,255,0.7);border:1px solid var(--ink-20);border-radius:6px;padding:4px 12px;font-size:11px;color:var(--ink-50)}
-.b-body{padding:20px 18px 18px}
-.m-hero{background:var(--coral-l);border-radius:var(--r);padding:16px;margin-bottom:10px}
-.m-title{font-family:'Lora',serif;font-size:16px;font-weight:600;margin-bottom:4px;color:var(--ink)}
-.m-sub{font-size:10.5px;color:var(--ink-50);line-height:1.5;margin-bottom:10px}
-.m-btns{display:flex;gap:7px}
-.m-b1{background:var(--coral);color:white;padding:5px 12px;border-radius:100px;font-size:9.5px;font-weight:500}
-.m-b2{border:1px solid var(--ink-20);color:var(--ink-50);padding:5px 12px;border-radius:100px;font-size:9.5px}
-.m-label{font-size:9px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-50);margin-bottom:9px}
-.m-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.m-card{background:var(--sand);border-radius:8px;padding:10px}
-.m-line{height:5px;border-radius:3px;background:var(--ink-20);margin-bottom:5px}
-.m-line.f{width:100%}.m-line.m{width:70%}.m-line.s{width:45%}
-.pill{
-  position:absolute;background:var(--white);border:1px solid var(--ink-20);
-  border-radius:var(--pill);padding:7px 13px;
-  font-size:11.5px;font-weight:500;color:var(--ink-80);
-  display:flex;align-items:center;gap:7px;
-  box-shadow:0 4px 16px rgba(28,25,23,0.08);white-space:nowrap;
-}
-.pill .pd{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.p1{top:-13px;right:-14px;animation:b1 4.5s ease-in-out infinite}
-.p2{bottom:10px;left:-16px;animation:b2 5.5s ease-in-out infinite}
+/* browser */
+.hv{position:relative}
+.browser{background:var(--white);border:1px solid var(--ink-15);border-radius:var(--rl);overflow:hidden;box-shadow:0 20px 56px rgba(15,14,12,0.1),0 4px 12px rgba(15,14,12,0.05)}
+.bbar{background:var(--off);border-bottom:1px solid var(--ink-15);padding:9px 14px;display:flex;align-items:center;gap:5px}
+.bd{width:8px;height:8px;border-radius:50%}
+.bd:nth-child(1){background:#FF5F57}.bd:nth-child(2){background:#FFBD2E}.bd:nth-child(3){background:#28CA41}
+.burl{flex:1;margin-left:8px;background:rgba(255,255,255,0.8);border:1px solid var(--ink-15);border-radius:5px;padding:3px 10px;font-size:10.5px;color:var(--ink-40)}
+.bbody{padding:16px 14px 14px}
+.mh{background:var(--orange-l);border-radius:7px;padding:13px;margin-bottom:9px;border:1px solid rgba(232,97,26,.12)}
+.mt{font-family:'Lora',serif;font-size:14.5px;font-weight:600;margin-bottom:3px;color:var(--ink)}
+.ms{font-size:9.5px;color:var(--ink-40);line-height:1.5;margin-bottom:9px}
+.mbs{display:flex;gap:6px}
+.mb1{background:var(--orange);color:#fff;padding:5px 11px;border-radius:100px;font-size:9px;font-weight:500}
+.mb2{border:1px solid var(--ink-15);color:var(--ink-40);padding:5px 11px;border-radius:100px;font-size:9px}
+.mlbl{font-size:8.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-40);margin-bottom:7px}
+.mcards{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.mcard{background:var(--off);border-radius:6px;padding:8px;border:1px solid var(--ink-07)}
+.ml{height:4px;border-radius:2px;background:var(--ink-15);margin-bottom:4px}
+.ml.f{width:100%}.ml.m{width:68%}.ml.s{width:42%}
+.ftag{position:absolute;background:var(--white);border:1px solid var(--ink-15);border-radius:var(--pill);padding:6px 12px;font-size:11px;font-weight:500;color:var(--ink-70);display:flex;align-items:center;gap:6px;box-shadow:0 4px 14px rgba(15,14,12,0.09);white-space:nowrap}
+.ftag .fd{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.ft1{top:-12px;right:-12px;animation:b1 4.5s ease-in-out infinite}
+.ft2{bottom:10px;left:-14px;animation:b2 5.5s ease-in-out infinite}
 @keyframes b1{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes b2{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 
 /* TICKER */
-.ticker{
-  background:var(--sand);border-bottom:1px solid var(--ink-20);
-  padding:16px 6%;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
-}
-.tk-label{font-size:11.5px;color:var(--ink-50);letter-spacing:.05em;text-transform:uppercase}
-.tk-sep{width:1px;height:13px;background:var(--ink-20)}
-.tk-item{font-size:13px;color:var(--ink-50);font-weight:400}
+.ticker{background:var(--orange);padding:11px 5%;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.tk-lbl{font-size:11px;color:rgba(255,255,255,.65);letter-spacing:.06em;text-transform:uppercase}
+.tk-sep{width:1px;height:12px;background:rgba(255,255,255,.3)}
+.tk-item{font-size:12.5px;color:rgba(255,255,255,.9);font-weight:400}
 
-/* SECTION COMMON */
-.sec{padding:92px 6%}
-.sec-inner{max-width:1080px;margin:0 auto}
-.sec-alt{background:var(--sand)}
+/* SECTIONS */
+.sec{padding:56px 5%}
+.sec-inner{max-width:1060px;margin:0 auto}
+.sec-alt{background:var(--off)}
+.sec-blue{background:var(--blue)}
 
-.sec-eyebrow{
-  font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--coral);display:flex;align-items:center;gap:8px;margin-bottom:14px;
-}
-.sec-eyebrow::before{content:'';width:18px;height:1.5px;background:var(--coral)}
-.sec-h{
-  font-family:'Lora',serif;font-size:clamp(28px,3vw,42px);
-  font-weight:600;letter-spacing:-1px;line-height:1.18;margin-bottom:12px;color:var(--ink);
-}
-.sec-sub{font-size:16px;color:var(--ink-50);max-width:520px;line-height:1.75;font-weight:300}
+.ey{font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:7px;margin-bottom:12px}
+.ey::before{content:'';width:16px;height:1.5px;background:var(--orange)}
+.ey.blue-ey{color:var(--blue)}
+.ey.blue-ey::before{background:var(--blue)}
+.h2{font-family:'Lora',serif;font-size:clamp(24px,2.8vw,38px);font-weight:600;letter-spacing:-1px;line-height:1.18;margin-bottom:10px;color:var(--ink)}
+.sub{font-size:14.5px;color:var(--ink-40);max-width:500px;line-height:1.72;font-weight:300}
 
-/* HOW IT WORKS */
-.steps{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;background:var(--ink-20);
-  border:1px solid var(--ink-20);border-radius:var(--rl);
-  overflow:hidden;margin-top:52px;
-}
-.step{background:var(--white);padding:36px 32px}
-.step-n{font-family:'Lora',serif;font-size:13px;font-weight:600;color:var(--coral);margin-bottom:20px;letter-spacing:.05em}
-.step h3{font-family:'Lora',serif;font-size:19px;font-weight:600;margin-bottom:10px;letter-spacing:-.3px;color:var(--ink)}
-.step p{font-size:14px;color:var(--ink-50);line-height:1.72;font-weight:300}
+/* HOW */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink-15);border:1px solid var(--ink-15);border-radius:var(--rl);overflow:hidden;margin-top:32px}
+.step{background:var(--white);padding:28px 26px}
+.sn{font-family:'Lora',serif;font-size:12px;font-weight:600;color:var(--orange);margin-bottom:16px;letter-spacing:.04em}
+.step h3{font-family:'Lora',serif;font-size:17px;font-weight:600;margin-bottom:8px;letter-spacing:-.2px;color:var(--ink)}
+.step p{font-size:13px;color:var(--ink-40);line-height:1.7;font-weight:300}
 
-/* COLOURED VALUE STRIP */
-.value-strip{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:16px;margin-top:52px;
-}
-.vs-card{
-  border-radius:var(--rl);padding:28px 26px;
-  border:1.5px solid transparent;
-}
-.vs-card.c1{background:var(--coral-l);border-color:rgba(217,95,59,.18)}
-.vs-card.c2{background:var(--teal-l);border-color:rgba(14,140,106,.18)}
-.vs-card.c3{background:var(--violet-l);border-color:rgba(109,63,192,.18)}
-.vs-icon{font-size:28px;margin-bottom:14px}
-.vs-card h3{font-family:'Lora',serif;font-size:17px;font-weight:600;margin-bottom:6px;letter-spacing:-.2px}
-.vs-card.c1 h3{color:var(--coral-d)}
-.vs-card.c2 h3{color:var(--teal-d)}
-.vs-card.c3 h3{color:var(--violet)}
-.vs-card p{font-size:13.5px;line-height:1.65;font-weight:300}
-.vs-card.c1 p{color:rgba(180,60,20,.7)}
-.vs-card.c2 p{color:rgba(8,90,60,.7)}
-.vs-card.c3 p{color:rgba(80,40,160,.7)}
+/* VALUE CARDS */
+.vcards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
+.vc{border-radius:var(--rl);padding:22px 20px;border:1.5px solid transparent}
+.vc.v1{background:var(--orange-l);border-color:rgba(232,97,26,.15)}
+.vc.v2{background:var(--blue-l);border-color:rgba(26,95,191,.15)}
+.vc.v3{background:var(--off);border-color:var(--ink-15)}
+.vc-ico{font-size:22px;margin-bottom:10px}
+.vc h3{font-family:'Lora',serif;font-size:15px;font-weight:600;margin-bottom:5px;letter-spacing:-.2px}
+.vc.v1 h3{color:var(--orange-d)}.vc.v2 h3{color:var(--blue-d)}.vc.v3 h3{color:var(--ink)}
+.vc p{font-size:12.5px;line-height:1.6;font-weight:300}
+.vc.v1 p{color:rgba(192,78,18,.65)}.vc.v2 p{color:rgba(19,74,153,.65)}.vc.v3 p{color:var(--ink-40)}
 
 /* PRICING */
-.p-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
-.pc{
-  border:1px solid var(--ink-20);border-radius:var(--rl);
-  padding:30px 26px;background:var(--white);
-  display:flex;flex-direction:column;position:relative;
-}
-.pc.feat{background:var(--ink);border-color:var(--ink)}
-.p-badge{
-  position:absolute;top:-11px;left:24px;
-  background:var(--amber);color:#fff;
-  font-size:10px;font-weight:500;letter-spacing:.05em;
-  text-transform:uppercase;padding:3px 12px;border-radius:var(--pill);
-}
-.p-tier{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-50);margin-bottom:10px}
-.pc.feat .p-tier{color:rgba(255,255,255,.4)}
-.p-price{font-family:'Lora',serif;font-size:46px;font-weight:600;letter-spacing:-2px;line-height:1;margin-bottom:4px;color:var(--ink)}
-.pc.feat .p-price{color:var(--white)}
-.p-price sup{font-size:22px;vertical-align:super;letter-spacing:0}
-.p-note{font-size:11.5px;color:var(--ink-50);margin-bottom:22px;font-weight:300}
-.pc.feat .p-note{color:rgba(255,255,255,.35)}
-.p-hr{border:none;border-top:1px solid var(--ink-20);margin-bottom:18px}
-.pc.feat .p-hr{border-color:rgba(255,255,255,.12)}
-.p-list{list-style:none;flex:1;display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
-.p-list li{font-size:13px;color:var(--ink-80);display:flex;align-items:flex-start;gap:8px;font-weight:300}
-.pc.feat .p-list li{color:rgba(255,255,255,.7)}
-.ck{width:16px;height:16px;border-radius:50%;flex-shrink:0;margin-top:1px;background:var(--teal-l);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--teal)}
-.pc.feat .ck{background:rgba(255,255,255,.12);color:rgba(255,255,255,.8)}
-.p-btn{display:block;text-align:center;padding:11px;border-radius:var(--pill);font-size:13px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink-20);color:var(--ink-80);transition:all .18s}
-.p-btn:hover{border-color:var(--coral);color:var(--coral)}
-.pc.feat .p-btn{background:var(--coral);color:white;border-color:transparent}
-.pc.feat .p-btn:hover{background:var(--coral-d)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.pc{border:1px solid var(--ink-15);border-radius:var(--rl);padding:24px 22px;background:var(--white);display:flex;flex-direction:column;position:relative}
+.pc.feat{background:var(--orange);border-color:var(--orange)}
+.pbadge{position:absolute;top:-10px;left:20px;background:var(--blue);color:#fff;font-size:9.5px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;padding:3px 11px;border-radius:var(--pill)}
+.ptier{font-size:10.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-40);margin-bottom:8px}
+.pc.feat .ptier{color:rgba(255,255,255,.55)}
+.pprice{font-family:'Lora',serif;font-size:42px;font-weight:600;letter-spacing:-2px;line-height:1;margin-bottom:3px;color:var(--ink)}
+.pc.feat .pprice{color:#fff}
+.pprice sup{font-size:20px;vertical-align:super;letter-spacing:0}
+.pnote{font-size:11px;color:var(--ink-40);margin-bottom:18px;font-weight:300}
+.pc.feat .pnote{color:rgba(255,255,255,.5)}
+.phr{border:none;border-top:1px solid var(--ink-15);margin-bottom:14px}
+.pc.feat .phr{border-color:rgba(255,255,255,.2)}
+.plist{list-style:none;flex:1;display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
+.plist li{font-size:12.5px;color:var(--ink-70);display:flex;align-items:flex-start;gap:7px;font-weight:300}
+.pc.feat .plist li{color:rgba(255,255,255,.85)}
+.ck{width:14px;height:14px;border-radius:50%;flex-shrink:0;margin-top:1px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;font-size:8px;color:var(--blue)}
+.pc.feat .ck{background:rgba(255,255,255,.2);color:#fff}
+.pbtn{display:block;text-align:center;padding:10px;border-radius:var(--pill);font-size:12.5px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink-15);color:var(--ink-70);transition:all .15s}
+.pbtn:hover{border-color:var(--orange);color:var(--orange)}
+.pc.feat .pbtn{background:#fff;color:var(--orange);border-color:transparent}
+.pc.feat .pbtn:hover{background:var(--orange-l)}
 
-/* ADD-ON */
-.addon{
-  margin-top:18px;
-  background:var(--sky-l);
-  border:1.5px solid rgba(27,128,196,.2);
-  border-radius:var(--rl);
-  padding:26px 30px;
-  display:flex;align-items:center;justify-content:space-between;gap:28px;
-}
-.addon-left{display:flex;align-items:center;gap:18px}
-.addon-ico{width:46px;height:46px;border-radius:12px;background:rgba(27,128,196,.15);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
-.addon-text h4{font-family:'Lora',serif;font-size:16px;font-weight:600;margin-bottom:4px;color:var(--sky)}
-.addon-text p{font-size:13px;color:rgba(14,60,100,.6);line-height:1.6;font-weight:300;max-width:460px}
-.addon-right{text-align:right;flex-shrink:0}
-.addon-price{font-family:'Lora',serif;font-size:32px;font-weight:600;letter-spacing:-1px;color:var(--sky);display:block;line-height:1}
-.addon-caption{font-size:11.5px;color:rgba(27,128,196,.6);font-weight:300;display:block;margin-bottom:10px}
-.addon-cta{display:inline-block;background:var(--sky);color:white;padding:8px 18px;border-radius:var(--pill);font-size:12.5px;font-weight:500;text-decoration:none;transition:background .18s}
-.addon-cta:hover{background:#1460A0}
-
-/* ABOUT */
-.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.portrait{
-  background:var(--coral-l);border-radius:var(--rl);
-  aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;
-  font-family:'Lora',serif;font-size:clamp(72px,11vw,110px);font-weight:600;
-  color:var(--coral);max-width:370px;
-  border:1.5px solid rgba(217,95,59,.15);position:relative;
-}
-.portrait-tag{
-  position:absolute;bottom:-14px;right:-14px;
-  background:var(--white);border:1px solid var(--ink-20);
-  border-radius:var(--r);padding:13px 16px;
-  box-shadow:0 8px 24px rgba(28,25,23,0.08);
-}
-.portrait-tag strong{display:block;font-size:14.5px;font-weight:500;font-family:'Lora',serif;margin-bottom:1px;color:var(--ink)}
-.portrait-tag span{font-size:11.5px;color:var(--ink-50);font-weight:300}
-.about-copy .sec-h{margin-bottom:16px}
-.about-copy p{font-size:15.5px;color:var(--ink-50);line-height:1.8;margin-bottom:14px;font-weight:300}
-.pillars{margin-top:28px;border:1px solid var(--ink-20);border-radius:var(--r);overflow:hidden}
-.pillar{background:var(--white);padding:14px 16px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--ink-20);transition:background .18s}
-.pillar:last-child{border-bottom:none}
-.pillar:hover{background:var(--sand)}
-.p-ico{width:34px;height:34px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px}
-.pillar h4{font-size:13.5px;font-weight:500;color:var(--ink);margin-bottom:1px}
-.pillar p{font-size:12.5px;color:var(--ink-50);line-height:1.4;font-weight:300}
-
-/* FAQ */
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:52px}
-.faq{background:var(--white);border:1px solid var(--ink-20);border-radius:var(--r);padding:22px 20px}
-.faq h4{font-family:'Lora',serif;font-size:16px;font-weight:600;margin-bottom:8px;line-height:1.35;letter-spacing:-.2px;color:var(--ink)}
-.faq p{font-size:13.5px;color:var(--ink-50);line-height:1.7;font-weight:300}
-
-/* CTA */
-.cta-sec{background:var(--ink);padding:92px 6%}
-.cta-in{max-width:580px;margin:0 auto;text-align:center}
-.cta-ey{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.35);display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:14px}
-.cta-ey::before{content:'';width:18px;height:1px;background:rgba(245,240,232,.2)}
-.cta-in h2{font-family:'Lora',serif;font-size:clamp(32px,4vw,48px);font-weight:600;color:var(--white);letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px}
-.cta-in h2 em{font-style:italic;color:#F49070}
-.cta-in p{font-size:16px;color:rgba(255,255,255,.42);margin-bottom:30px;line-height:1.7;font-weight:300}
-.cta-form{display:flex;gap:8px}
-.cta-form input{flex:1;padding:13px 18px;border-radius:var(--pill);border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:white;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .18s}
-.cta-form input::placeholder{color:rgba(255,255,255,.28)}
-.cta-form input:focus{border-color:rgba(255,255,255,.26)}
-.cta-form button{background:var(--coral);color:white;border:none;padding:13px 22px;border-radius:var(--pill);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:500;transition:background .18s;white-space:nowrap}
-.cta-form button:hover{background:var(--coral-d)}
-
-/* FOOTER */
-footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:22px 6%;display:flex;align-items:center;justify-content:space-between}
-.flogo{font-family:'Lora',serif;font-weight:600;font-size:18px;color:rgba(255,255,255,.6);text-decoration:none}
-.flogo em{font-style:normal;color:#F49070}
-footer p,footer a{font-size:12px;color:rgba(255,255,255,.28);text-decoration:none}
-footer a:hover{color:rgba(255,255,255,.55)}
-
-/* ANIMATE */
-@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.hero-text>*{animation:up .65s ease both}
-.hero-text>*:nth-child(1){animation-delay:.05s}
-.hero-text>*:nth-child(2){animation-delay:.13s}
-.hero-text>*:nth-child(3){animation-delay:.21s}
-.hero-text>*:nth-child(4){animation-delay:.3s}
-.hero-vis{animation:up .65s .26s ease both}
+/* ADDON */
+.addon{margin-top:14px;background:var(--blue-l);border:1.5px solid rgba(26,95,191,.18);border-radius:var(--rl);padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.addon-l{display:flex;align-items:center;gap:14px}
+.addon-ico{width:42px;height:42px;border-radius:10px;background:rgba(26,95,191,.15);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.addon-text h4{font-family:'Lora',serif;font-size:15px;font-weight:600;margin-bottom:3px;color:var(--blue-d)}
+.addon-text p{font-size:12.5px;color:rgba(19,74,153,.6);line-height:1.55;font-weight:300;max-width:440px}
+.addon-r{text-align:right;flex-shrink:0}
+.addon-price{font-family:'Lora',serif;font-size:30px;font-weight:600;letter-spacing:-1px;color:var(--blue-d);display:block;line-height:1}
+.addon-cap{font-size:11px;color:rgba(26,95,191,.5);font-weight:300;display:block;margin-bottom:8px}
+.addon-cta{display:inline-block;background:var(--blue);color:#fff;padding:7px 16px;border-radius:var(--pill);font-size:12px;font-weight:500;text-decoration:none;transition:background .15s}
+.addon-cta:hover{background:var(--blue-d)}
 
 /* PORTFOLIO */
-.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
-.port-card{border:1px solid var(--ink-20);border-radius:var(--rl);overflow:hidden;background:var(--white);transition:transform .2s,box-shadow .2s}
-.port-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(28,25,23,0.1)}
-.port-screen{height:180px;position:relative;overflow:hidden;border-bottom:1px solid var(--ink-20)}
-.port-screen.s1{background:linear-gradient(135deg,#FCEEE9 0%,#F5D5C8 100%)}
-.port-screen.s2{background:linear-gradient(135deg,#E0F4EE 0%,#B8E8D8 100%)}
-.port-screen.s3{background:linear-gradient(135deg,#EEE8FF 0%,#D4C4F8 100%)}
-.port-screen.s4{background:linear-gradient(135deg,#FEF3CD 0%,#FAE08A 100%)}
-.port-screen.s5{background:linear-gradient(135deg,#E3F1FB 0%,#B8D8F0 100%)}
-.port-screen.s6{background:linear-gradient(135deg,#F5F0E8 0%,#E8DFC8 100%)}
-.port-mock{margin:16px;background:var(--white);border-radius:8px;border:1px solid rgba(28,25,23,0.1);overflow:hidden;height:calc(100% - 32px)}
-.port-mock-bar{height:20px;border-bottom:1px solid rgba(28,25,23,0.08);background:rgba(255,255,255,0.8);display:flex;align-items:center;gap:4px;padding:0 8px}
-.pm-dot{width:5px;height:5px;border-radius:50%}
-.pm-dot:nth-child(1){background:#FF5F57}.pm-dot:nth-child(2){background:#FFBD2E}.pm-dot:nth-child(3){background:#28CA41}
-.port-mock-body{padding:8px}
-.pmb-h{height:6px;border-radius:3px;background:rgba(28,25,23,0.15);width:60%;margin-bottom:5px}
-.pmb-l{height:4px;border-radius:2px;background:rgba(28,25,23,0.08);margin-bottom:3px}
-.pmb-l.w80{width:80%}.pmb-l.w60{width:60%}.pmb-l.w90{width:90%}
-.pmb-btn{height:12px;width:40%;border-radius:100px;margin-top:6px}
-.port-meta{padding:18px 20px}
-.port-niche{display:inline-block;font-size:10.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:var(--pill);margin-bottom:8px}
-.port-meta h3{font-family:'Lora',serif;font-size:17px;font-weight:600;margin-bottom:5px;letter-spacing:-.2px;color:var(--ink)}
-.port-meta p{font-size:13px;color:var(--ink-50);line-height:1.55;font-weight:300}
+.pgrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.pcard{border:1px solid var(--ink-15);border-radius:var(--rl);overflow:hidden;background:var(--white);transition:transform .18s,box-shadow .18s}
+.pcard:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(15,14,12,0.1)}
+.pscreen{height:160px;position:relative;border-bottom:1px solid var(--ink-15)}
+.pscreen.po{background:linear-gradient(135deg,var(--orange-l) 0%,var(--orange-m) 100%)}
+.pscreen.pb{background:linear-gradient(135deg,#FDF6E8 0%,#F5E0A8 100%)}
+.pscreen.pg{background:linear-gradient(135deg,var(--blue-l) 0%,var(--blue-m) 100%)}
+.pmock{margin:12px;background:var(--white);border-radius:6px;border:1px solid rgba(15,14,12,0.09);overflow:hidden;height:calc(100% - 24px)}
+.pmbar{height:18px;border-bottom:1px solid rgba(15,14,12,0.07);background:rgba(255,255,255,0.85);display:flex;align-items:center;gap:3px;padding:0 7px}
+.pmd{width:5px;height:5px;border-radius:50%}
+.pmd:nth-child(1){background:#FF5F57}.pmd:nth-child(2){background:#FFBD2E}.pmd:nth-child(3){background:#28CA41}
+.pmbody{padding:7px}
+.pmh{height:5px;border-radius:3px;background:rgba(15,14,12,0.15);width:55%;margin-bottom:4px}
+.pml{height:3.5px;border-radius:2px;background:rgba(15,14,12,0.08);margin-bottom:3px}
+.pml.w80{width:80%}.pml.w60{width:60%}.pml.w90{width:90%}
+.pmbtn{height:10px;width:35%;border-radius:100px;margin-top:5px}
+.pmeta{padding:14px 16px}
+.pniche{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;padding:2px 9px;border-radius:var(--pill);margin-bottom:7px}
+.pniche.no{background:var(--orange-l);color:var(--orange-d)}
+.pniche.nb{background:#FEF3CD;color:#92600A}
+.pniche.ng{background:var(--blue-l);color:var(--blue-d)}
+.pmeta h3{font-family:'Lora',serif;font-size:15.5px;font-weight:600;margin-bottom:4px;letter-spacing:-.2px;color:var(--ink)}
+.pmeta p{font-size:12.5px;color:var(--ink-40);line-height:1.55;font-weight:300}
+
+/* ABOUT */
+.awrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.portrait{background:var(--orange-l);border-radius:var(--rl);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:'Lora',serif;font-size:clamp(64px,10vw,100px);font-weight:600;color:var(--orange);max-width:340px;border:1.5px solid rgba(232,97,26,.15);position:relative}
+.ptag{position:absolute;bottom:-12px;right:-12px;background:var(--white);border:1px solid var(--ink-15);border-radius:var(--r);padding:11px 14px;box-shadow:0 6px 20px rgba(15,14,12,0.08)}
+.ptag strong{display:block;font-size:13.5px;font-weight:500;font-family:'Lora',serif;margin-bottom:1px;color:var(--ink)}
+.ptag span{font-size:11px;color:var(--ink-40);font-weight:300}
+.acopy .h2{margin-bottom:14px}
+.acopy p{font-size:14.5px;color:var(--ink-40);line-height:1.78;margin-bottom:12px;font-weight:300}
+.pillars{margin-top:20px;border:1px solid var(--ink-15);border-radius:var(--r);overflow:hidden}
+.pillar{background:var(--white);padding:12px 14px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--ink-15);transition:background .15s}
+.pillar:last-child{border-bottom:none}
+.pillar:hover{background:var(--off)}
+.pico{width:30px;height:30px;border-radius:7px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px}
+.pillar h4{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:1px}
+.pillar p{font-size:11.5px;color:var(--ink-40);line-height:1.4;font-weight:300}
+
+/* FAQ */
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:32px}
+.faq{background:var(--white);border:1px solid var(--ink-15);border-radius:var(--r);padding:18px 16px}
+.faq h4{font-family:'Lora',serif;font-size:15px;font-weight:600;margin-bottom:7px;line-height:1.3;letter-spacing:-.2px;color:var(--ink)}
+.faq p{font-size:12.5px;color:var(--ink-40);line-height:1.65;font-weight:300}
+
+/* CTA */
+.cta-sec{background:var(--ink);padding:64px 5%}
+.cta-in{max-width:520px;margin:0 auto;text-align:center}
+.cta-ey{font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;gap:7px;margin-bottom:12px}
+.cta-ey::before{content:'';width:16px;height:1px;background:rgba(255,255,255,.2)}
+.cta-in h2{font-family:'Lora',serif;font-size:clamp(28px,3.5vw,42px);font-weight:600;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:10px}
+.cta-in h2 em{font-style:italic;color:var(--orange-m)}
+.cta-in p{font-size:14.5px;color:rgba(255,255,255,.4);margin-bottom:24px;line-height:1.7;font-weight:300}
+.cta-form{display:flex;gap:7px}
+.cta-form input{flex:1;padding:11px 16px;border-radius:var(--pill);border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.07);color:#fff;font-family:'DM Sans',sans-serif;font-size:13.5px;outline:none;transition:border-color .15s}
+.cta-form input::placeholder{color:rgba(255,255,255,.25)}
+.cta-form input:focus{border-color:rgba(255,255,255,.25)}
+.cta-form button{background:var(--orange);color:#fff;border:none;padding:11px 20px;border-radius:var(--pill);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;transition:background .15s;white-space:nowrap}
+.cta-form button:hover{background:var(--orange-d)}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);padding:18px 5%;display:flex;align-items:center;justify-content:space-between}
+.flogo{font-family:'Lora',serif;font-weight:600;font-size:17px;color:rgba(255,255,255,.5);text-decoration:none}
+.flogo em{font-style:normal;color:var(--orange)}
+footer p,footer a{font-size:11.5px;color:rgba(255,255,255,.25);text-decoration:none}
+footer a:hover{color:rgba(255,255,255,.55)}
+
+/* ANIM */
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hero-text>*{animation:up .6s ease both}
+.hero-text>*:nth-child(1){animation-delay:.04s}
+.hero-text>*:nth-child(2){animation-delay:.12s}
+.hero-text>*:nth-child(3){animation-delay:.2s}
+.hero-text>*:nth-child(4){animation-delay:.28s}
+.hv{animation:up .6s .24s ease both}
 
 /* RESPONSIVE */
-@media(max-width:820px){
-  .hero{grid-template-columns:1fr;gap:44px;padding:56px 6% 48px}
-  .hero-vis{order:-1}
-  .p1,.p2{display:none}
+@media(max-width:800px){
+  .hero{grid-template-columns:1fr;gap:36px;padding:44px 5% 40px}
+  .hv{order:-1}
+  .ft1,.ft2{display:none}
   .steps{grid-template-columns:1fr;background:none;border-radius:var(--r)}
-  .step{border-bottom:1px solid var(--ink-20)}
+  .step{border-bottom:1px solid var(--ink-15)}
   .step:last-child{border-bottom:none}
-  .value-strip{grid-template-columns:1fr}
-  .p-wrap{grid-template-columns:1fr}
-  .addon{flex-direction:column;align-items:flex-start;gap:16px}
-  .addon-right{text-align:left}
-  .about-wrap{grid-template-columns:1fr;gap:40px}
-  .port-grid{grid-template-columns:1fr}
-  .faq-grid{grid-template-columns:1fr}
+  .vcards,.pgrid,.pgrid3{grid-template-columns:1fr}
+  .addon{flex-direction:column;align-items:flex-start;gap:12px}
+  .addon-r{text-align:left}
+  .awrap{grid-template-columns:1fr;gap:32px}
+  .fgrid{grid-template-columns:1fr}
   nav .nav-links{display:none}
   .cta-form{flex-direction:column}
-  footer{flex-direction:column;gap:8px;text-align:center}
+  footer{flex-direction:column;gap:6px;text-align:center}
 }
 </style>
 </head>
@@ -344,7 +258,7 @@ footer a:hover{color:rgba(255,255,255,.55)}
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Dolan<em>.</em>Digital</a>
+  <a href="#" class="logo">Dolan<em>.</em>Digital</a>
   <ul class="nav-links">
     <li><a href="#how">How it works</a></li>
     <li><a href="#pricing">Pricing</a></li>
@@ -358,46 +272,46 @@ footer a:hover{color:rgba(255,255,255,.55)}
 <div class="hero-wrap">
   <div class="hero">
     <div class="hero-text">
-      <div class="eyebrow">Small business websites</div>
+      <div class="ew">Small business websites</div>
       <h1>Your business,<br>beautifully <em>online.</em></h1>
-      <p class="hero-sub">Clean, professional websites built for small businesses — delivered as files you fully own. No subscriptions, no lock-in, no ongoing fees to me.</p>
+      <p class="hero-p">Clean, professional websites for small businesses — delivered as files you fully own. No subscriptions, no lock-in, no ongoing fees to me.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Get a free mockup →</a>
-        <a href="#pricing" class="btn-outline">View pricing</a>
+        <a href="#contact" class="btn-fill">Get a free mockup →</a>
+        <a href="#pricing" class="btn-line">View pricing</a>
       </div>
     </div>
-    <div class="hero-vis">
-      <div class="pill p1"><div class="pd" style="background:var(--teal)"></div>Ready in 3–5 days</div>
+    <div class="hv">
+      <div class="ftag ft1"><div class="fd" style="background:var(--orange)"></div>Ready in 3–5 days</div>
       <div class="browser">
-        <div class="b-bar">
+        <div class="bbar">
           <div class="bd"></div><div class="bd"></div><div class="bd"></div>
-          <div class="b-url">www.yourbusiness.com.au</div>
+          <div class="burl">www.yourbusiness.com</div>
         </div>
-        <div class="b-body">
-          <div class="m-hero">
-            <div class="m-title">Your Business Name</div>
-            <div class="m-sub">A short line about what you do and who you help — clear, warm, and to the point.</div>
-            <div class="m-btns">
-              <div class="m-b1">Get in touch →</div>
-              <div class="m-b2">Our services</div>
+        <div class="bbody">
+          <div class="mh">
+            <div class="mt">Your Business Name</div>
+            <div class="ms">A short line about what you do and who you help — clear, warm, and to the point.</div>
+            <div class="mbs">
+              <div class="mb1">Get in touch →</div>
+              <div class="mb2">Our services</div>
             </div>
           </div>
-          <div class="m-label">Services</div>
-          <div class="m-cards">
-            <div class="m-card"><div class="m-line f"></div><div class="m-line m"></div><div class="m-line s"></div></div>
-            <div class="m-card"><div class="m-line f"></div><div class="m-line m"></div><div class="m-line s"></div></div>
-            <div class="m-card"><div class="m-line f"></div><div class="m-line m"></div><div class="m-line s"></div></div>
+          <div class="mlbl">Services</div>
+          <div class="mcards">
+            <div class="mcard"><div class="ml f"></div><div class="ml m"></div><div class="ml s"></div></div>
+            <div class="mcard"><div class="ml f"></div><div class="ml m"></div><div class="ml s"></div></div>
+            <div class="mcard"><div class="ml f"></div><div class="ml m"></div><div class="ml s"></div></div>
           </div>
         </div>
       </div>
-      <div class="pill p2"><div class="pd" style="background:var(--coral)"></div>You own the files</div>
+      <div class="ftag ft2"><div class="fd" style="background:var(--blue)"></div>You own the files</div>
     </div>
   </div>
 </div>
 
 <!-- TICKER -->
 <div class="ticker">
-  <span class="tk-label">Built for</span>
+  <span class="tk-lbl">Built for</span>
   <div class="tk-sep"></div>
   <span class="tk-item">Tradies</span>
   <div class="tk-sep"></div>
@@ -415,43 +329,41 @@ footer a:hover{color:rgba(255,255,255,.55)}
 <!-- HOW IT WORKS -->
 <section class="sec" id="how">
   <div class="sec-inner">
-    <div class="sec-eyebrow">How it works</div>
-    <h2 class="sec-h">Three steps to a website<br>you actually own.</h2>
-    <p class="sec-sub">Simple and personal from first message to final file.</p>
+    <div class="ey">How it works</div>
+    <h2 class="h2">Three steps to a site you own.</h2>
+    <p class="sub">Simple and personal from first message to final file.</p>
     <div class="steps">
       <div class="step">
-        <div class="step-n">01</div>
+        <div class="sn">01</div>
         <h3>Tell me about your business</h3>
-        <p>Share your name, services, photos, and any branding you have. We'll talk through what pages you need — no forms, just a conversation.</p>
+        <p>Share your name, services, photos, and any branding. We'll talk through what pages you need — no forms, just a conversation.</p>
       </div>
       <div class="step">
-        <div class="step-n">02</div>
+        <div class="sn">02</div>
         <h3>I build it, you review</h3>
-        <p>Within 3–5 days I'll have a full mockup ready. We refine together until it's exactly right — colours, copy, layout, everything.</p>
+        <p>Within 3–5 days you'll see a full mockup. We refine together until it's exactly right — colours, copy, layout, everything.</p>
       </div>
       <div class="step">
-        <div class="step-n">03</div>
+        <div class="sn">03</div>
         <h3>Receive your files</h3>
-        <p>Once you're happy and payment is complete, the website files are yours. Want me to get it live too? That's a simple add-on.</p>
+        <p>Once you're happy and payment is complete, the website files are yours. Want me to get it live? That's an add-on.</p>
       </div>
     </div>
-
-    <!-- VALUE CARDS -->
-    <div class="value-strip">
-      <div class="vs-card c1">
-        <div class="vs-icon">🔑</div>
+    <div class="vcards">
+      <div class="vc v1">
+        <div class="vc-ico">🔑</div>
         <h3>You own everything</h3>
-        <p>No platform lock-in. The code files are yours to host anywhere you like, forever.</p>
+        <p>No lock-in. The code files are yours to host anywhere, forever.</p>
       </div>
-      <div class="vs-card c2">
-        <div class="vs-icon">⚡</div>
+      <div class="vc v2">
+        <div class="vc-ico">⚡</div>
         <h3>Fast and personal</h3>
-        <p>You deal directly with me. No account managers, no outsourcing, no delays.</p>
+        <p>You deal directly with me. No account managers, no delays.</p>
       </div>
-      <div class="vs-card c3">
-        <div class="vs-icon">💰</div>
+      <div class="vc v3">
+        <div class="vc-ico">💰</div>
         <h3>Fair, flat pricing</h3>
-        <p>One price. No monthly fees to me. What you see below is exactly what you pay.</p>
+        <p>One price. No monthly fees. What you see is what you pay.</p>
       </div>
     </div>
   </div>
@@ -460,33 +372,33 @@ footer a:hover{color:rgba(255,255,255,.55)}
 <!-- PRICING -->
 <section class="sec sec-alt" id="pricing">
   <div class="sec-inner">
-    <div class="sec-eyebrow">Pricing</div>
-    <h2 class="sec-h">One price. No ongoing fees.</h2>
-    <p class="sec-sub">Pay once, get the files, own the site. All prices are AUD.</p>
-    <div class="p-wrap">
+    <div class="ey">Pricing</div>
+    <h2 class="h2">One price. No ongoing fees.</h2>
+    <p class="sub">Pay once, get the files, own the site. All prices in AUD.</p>
+    <div class="pgrid">
 
       <div class="pc">
-        <div class="p-tier">Starter</div>
-        <div class="p-price"><sup>$</sup>399</div>
-        <div class="p-note">one-time · files included</div>
-        <hr class="p-hr">
-        <ul class="p-list">
+        <div class="ptier">Starter</div>
+        <div class="pprice"><sup>$</sup>399</div>
+        <div class="pnote">one-time · files included</div>
+        <hr class="phr">
+        <ul class="plist">
           <li><div class="ck">✓</div>Single page website</li>
           <li><div class="ck">✓</div>Mobile responsive</li>
           <li><div class="ck">✓</div>Contact section</li>
           <li><div class="ck">✓</div>All files handed over</li>
           <li><div class="ck">✓</div>1 revision round</li>
         </ul>
-        <a href="#contact" class="p-btn">Get started</a>
+        <a href="#contact" class="pbtn">Get started</a>
       </div>
 
       <div class="pc feat">
-        <div class="p-badge">Most popular</div>
-        <div class="p-tier">Standard</div>
-        <div class="p-price"><sup>$</sup>799</div>
-        <div class="p-note">one-time · files included</div>
-        <hr class="p-hr">
-        <ul class="p-list">
+        <div class="pbadge">Most popular</div>
+        <div class="ptier">Standard</div>
+        <div class="pprice"><sup>$</sup>799</div>
+        <div class="pnote">one-time · files included</div>
+        <hr class="phr">
+        <ul class="plist">
           <li><div class="ck">✓</div>Up to 5 pages</li>
           <li><div class="ck">✓</div>Mobile responsive</li>
           <li><div class="ck">✓</div>Contact form</li>
@@ -495,15 +407,15 @@ footer a:hover{color:rgba(255,255,255,.55)}
           <li><div class="ck">✓</div>2 revision rounds</li>
           <li><div class="ck">✓</div>All files handed over</li>
         </ul>
-        <a href="#contact" class="p-btn">Get started</a>
+        <a href="#contact" class="pbtn">Get started</a>
       </div>
 
       <div class="pc">
-        <div class="p-tier">Premium</div>
-        <div class="p-price"><sup>$</sup>1,299</div>
-        <div class="p-note">one-time · files included</div>
-        <hr class="p-hr">
-        <ul class="p-list">
+        <div class="ptier">Premium</div>
+        <div class="pprice"><sup>$</sup>1,299</div>
+        <div class="pnote">one-time · files included</div>
+        <hr class="phr">
+        <ul class="plist">
           <li><div class="ck">✓</div>Up to 8 pages</li>
           <li><div class="ck">✓</div>Everything in Standard</li>
           <li><div class="ck">✓</div>Copywriting included</li>
@@ -511,23 +423,22 @@ footer a:hover{color:rgba(255,255,255,.55)}
           <li><div class="ck">✓</div>3 months free edits</li>
           <li><div class="ck">✓</div>Priority turnaround</li>
         </ul>
-        <a href="#contact" class="p-btn">Get started</a>
+        <a href="#contact" class="pbtn">Get started</a>
       </div>
 
     </div>
 
-    <!-- ADD-ON -->
     <div class="addon">
-      <div class="addon-left">
+      <div class="addon-l">
         <div class="addon-ico">🚀</div>
         <div class="addon-text">
           <h4>Add-on: I'll get it live for you</h4>
-          <p>Don't want to deal with hosting setup? I'll deploy your site to Netlify, connect your custom domain, and make sure everything is working — so you go live without touching a single setting.</p>
+          <p>I'll deploy your site to Netlify, connect your custom domain, and make sure everything is working — so you go live without touching a single setting.</p>
         </div>
       </div>
-      <div class="addon-right">
+      <div class="addon-r">
         <span class="addon-price">$75</span>
-        <span class="addon-caption">one-time add-on</span>
+        <span class="addon-cap">one-time add-on</span>
         <a href="#contact" class="addon-cta">Add to my order</a>
       </div>
     </div>
@@ -538,151 +449,97 @@ footer a:hover{color:rgba(255,255,255,.55)}
 <!-- PORTFOLIO -->
 <section class="sec" id="portfolio">
   <div class="sec-inner">
-    <div class="sec-eyebrow">Portfolio</div>
-    <h2 class="sec-h">Sample work.</h2>
-    <p class="sec-sub">A look at the kinds of sites I build — clean, on-brand, and designed to make a great first impression.</p>
-    <div class="port-grid">
+    <div class="ey">Portfolio</div>
+    <h2 class="h2">Sample work.</h2>
+    <p class="sub">A look at the kinds of sites I build — clean, on-brand, and built to make a strong first impression.</p>
+    <div class="pgrid3">
 
-      <div class="port-card">
-        <div class="port-screen s1">
-          <div class="port-mock">
-            <div class="port-mock-bar"><div class="pm-dot"></div><div class="pm-dot"></div><div class="pm-dot"></div></div>
-            <div class="port-mock-body">
-              <div class="pmb-h" style="background:rgba(217,95,59,.3)"></div>
-              <div class="pmb-l w80"></div><div class="pmb-l w60"></div><div class="pmb-l w90"></div>
-              <div class="pmb-btn" style="background:rgba(217,95,59,.25)"></div>
+      <div class="pcard">
+        <div class="pscreen po">
+          <div class="pmock">
+            <div class="pmbar"><div class="pmd"></div><div class="pmd"></div><div class="pmd"></div></div>
+            <div class="pmbody">
+              <div class="pmh" style="background:rgba(232,97,26,.3)"></div>
+              <div class="pml w80"></div><div class="pml w60"></div><div class="pml w90"></div>
+              <div class="pmbtn" style="background:rgba(232,97,26,.25)"></div>
             </div>
           </div>
         </div>
-        <div class="port-meta">
-          <span class="port-niche" style="background:var(--coral-l);color:var(--coral-d)">Tradie</span>
+        <div class="pmeta">
+          <span class="pniche no">Tradie</span>
           <h3>Local Plumbing & Gas</h3>
           <p>Single-page site with emergency callout CTA, services list, and Google Maps embed.</p>
         </div>
       </div>
 
-      <div class="port-card">
-        <div class="port-screen s2">
-          <div class="port-mock">
-            <div class="port-mock-bar"><div class="pm-dot"></div><div class="pm-dot"></div><div class="pm-dot"></div></div>
-            <div class="port-mock-body">
-              <div class="pmb-h" style="background:rgba(14,140,106,.3)"></div>
-              <div class="pmb-l w90"></div><div class="pmb-l w70"></div><div class="pmb-l w80"></div>
-              <div class="pmb-btn" style="background:rgba(14,140,106,.25)"></div>
+      <div class="pcard">
+        <div class="pscreen pb">
+          <div class="pmock">
+            <div class="pmbar"><div class="pmd"></div><div class="pmd"></div><div class="pmd"></div></div>
+            <div class="pmbody">
+              <div class="pmh" style="background:rgba(180,120,0,.25)"></div>
+              <div class="pml w80"></div><div class="pml w60"></div><div class="pml w90"></div>
+              <div class="pmbtn" style="background:rgba(180,120,0,.2)"></div>
             </div>
           </div>
         </div>
-        <div class="port-meta">
-          <span class="port-niche" style="background:var(--teal-l);color:var(--teal-d)">Health & Wellness</span>
-          <h3>Pilates & Movement Studio</h3>
-          <p>5-page site with class schedule, instructor bios, pricing, and a contact booking form.</p>
-        </div>
-      </div>
-
-      <div class="port-card">
-        <div class="port-screen s3">
-          <div class="port-mock">
-            <div class="port-mock-bar"><div class="pm-dot"></div><div class="pm-dot"></div><div class="pm-dot"></div></div>
-            <div class="port-mock-body">
-              <div class="pmb-h" style="background:rgba(109,63,192,.3)"></div>
-              <div class="pmb-l w70"></div><div class="pmb-l w90"></div><div class="pmb-l w60"></div>
-              <div class="pmb-btn" style="background:rgba(109,63,192,.25)"></div>
-            </div>
-          </div>
-        </div>
-        <div class="port-meta">
-          <span class="port-niche" style="background:var(--violet-l);color:var(--violet)">Consultant</span>
-          <h3>Independent Financial Adviser</h3>
-          <p>Clean 3-page site with services overview, about section, and lead capture form.</p>
-        </div>
-      </div>
-
-      <div class="port-card">
-        <div class="port-screen s4">
-          <div class="port-mock">
-            <div class="port-mock-bar"><div class="pm-dot"></div><div class="pm-dot"></div><div class="pm-dot"></div></div>
-            <div class="port-mock-body">
-              <div class="pmb-h" style="background:rgba(217,119,6,.3)"></div>
-              <div class="pmb-l w80"></div><div class="pmb-l w60"></div><div class="pmb-l w90"></div>
-              <div class="pmb-btn" style="background:rgba(217,119,6,.25)"></div>
-            </div>
-          </div>
-        </div>
-        <div class="port-meta">
-          <span class="port-niche" style="background:var(--amber-l);color:var(--amber)">Café</span>
+        <div class="pmeta">
+          <span class="pniche nb">Café</span>
           <h3>Neighbourhood Coffee Shop</h3>
-          <p>Warm, inviting single-page with menu highlights, opening hours, and location map.</p>
+          <p>Warm single-page site with menu highlights, opening hours, and location map.</p>
         </div>
       </div>
 
-      <div class="port-card">
-        <div class="port-screen s5">
-          <div class="port-mock">
-            <div class="port-mock-bar"><div class="pm-dot"></div><div class="pm-dot"></div><div class="pm-dot"></div></div>
-            <div class="port-mock-body">
-              <div class="pmb-h" style="background:rgba(27,128,196,.3)"></div>
-              <div class="pmb-l w90"></div><div class="pmb-l w70"></div><div class="pmb-l w80"></div>
-              <div class="pmb-btn" style="background:rgba(27,128,196,.25)"></div>
+      <div class="pcard">
+        <div class="pscreen pg">
+          <div class="pmock">
+            <div class="pmbar"><div class="pmd"></div><div class="pmd"></div><div class="pmd"></div></div>
+            <div class="pmbody">
+              <div class="pmh" style="background:rgba(26,95,191,.3)"></div>
+              <div class="pml w90"></div><div class="pml w70"></div><div class="pml w80"></div>
+              <div class="pmbtn" style="background:rgba(26,95,191,.25)"></div>
             </div>
           </div>
         </div>
-        <div class="port-meta">
-          <span class="port-niche" style="background:var(--sky-l);color:var(--sky)">Salon</span>
-          <h3>Hair & Beauty Studio</h3>
-          <p>5-page site with service menu, before & after gallery section, and online booking link.</p>
-        </div>
-      </div>
-
-      <div class="port-card">
-        <div class="port-screen s6">
-          <div class="port-mock">
-            <div class="port-mock-bar"><div class="pm-dot"></div><div class="pm-dot"></div><div class="pm-dot"></div></div>
-            <div class="port-mock-body">
-              <div class="pmb-h" style="background:rgba(28,25,23,.2)"></div>
-              <div class="pmb-l w70"></div><div class="pmb-l w85"></div><div class="pmb-l w60"></div>
-              <div class="pmb-btn" style="background:rgba(28,25,23,.15)"></div>
-            </div>
-          </div>
-        </div>
-        <div class="port-meta">
-          <span class="port-niche" style="background:var(--sand);color:var(--ink-50)">Retail</span>
-          <h3>Homewares Boutique</h3>
-          <p>Product showcase site with story section, featured items, and contact for stockist enquiries.</p>
+        <div class="pmeta">
+          <span class="pniche ng">Health & Wellness</span>
+          <h3>Pilates & Movement Studio</h3>
+          <p>5-page site with class schedule, instructor bios, pricing, and a booking form.</p>
         </div>
       </div>
 
     </div>
-    <p style="margin-top:28px;font-size:13.5px;color:var(--ink-50);text-align:center;font-weight:300">These are sample concepts — <a href="#contact" style="color:var(--coral);text-decoration:none;font-weight:500">get in touch</a> and I'll build a free mockup tailored to your business.</p>
+    <p style="margin-top:20px;font-size:12.5px;color:var(--ink-40);text-align:center;font-weight:300">These are sample concepts — <a href="#contact" style="color:var(--orange);text-decoration:none;font-weight:500">get in touch</a> and I'll build a free mockup tailored to your business.</p>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="sec" id="about">
-  <div class="sec-inner about-wrap">
+<section class="sec sec-alt" id="about">
+  <div class="sec-inner awrap">
     <div style="position:relative">
       <div class="portrait">A
-        <div class="portrait-tag">
+        <div class="ptag">
           <strong>Amanda Dolan</strong>
           <span>Available worldwide 🌏</span>
         </div>
       </div>
     </div>
-    <div class="about-copy">
-      <div class="sec-eyebrow">About</div>
-      <h2 class="sec-h">Hi, I'm Amanda.</h2>
+    <div class="acopy">
+      <div class="ey">About</div>
+      <h2 class="h2">Hi, I'm Amanda.</h2>
       <p>I'm a professional who loves helping small businesses look their best online. I've built my own portfolio site and know how to take a simple brief and turn it into something that genuinely represents your brand.</p>
       <p>I work with business owners who don't have time for complicated platforms or agency price tags. You get a personal service, quick turnaround, and a site you fully own — wherever you're based.</p>
       <div class="pillars">
         <div class="pillar">
-          <div class="p-ico" style="background:var(--coral-l)">🔑</div>
+          <div class="pico" style="background:var(--orange-l)">🔑</div>
           <div><h4>You own everything</h4><p>No lock-in. The code files are yours to host anywhere.</p></div>
         </div>
         <div class="pillar">
-          <div class="p-ico" style="background:var(--teal-l)">⚡</div>
+          <div class="pico" style="background:var(--blue-l)">⚡</div>
           <div><h4>Fast and personal</h4><p>You deal directly with me — no account managers or outsourcing.</p></div>
         </div>
         <div class="pillar">
-          <div class="p-ico" style="background:var(--amber-l)">💰</div>
+          <div class="pico" style="background:var(--off)">💰</div>
           <div><h4>Fair, flat pricing</h4><p>One price. No monthly fees. No surprises.</p></div>
         </div>
       </div>
@@ -691,18 +548,18 @@ footer a:hover{color:rgba(255,255,255,.55)}
 </section>
 
 <!-- FAQ -->
-<section class="sec sec-alt" id="faq">
+<section class="sec" id="faq">
   <div class="sec-inner">
-    <div class="sec-eyebrow">FAQ</div>
-    <h2 class="sec-h">Common questions.</h2>
-    <div class="faq-grid">
+    <div class="ey">FAQ</div>
+    <h2 class="h2">Common questions.</h2>
+    <div class="fgrid">
       <div class="faq">
         <h4>Do I need any technical knowledge?</h4>
         <p>Not at all. I handle everything and explain it in plain English. You just need to tell me about your business.</p>
       </div>
       <div class="faq">
         <h4>How does hosting work if you give me files?</h4>
-        <p>I'll point you to free options like Netlify where you drag-and-drop a folder and you're live in minutes. Or add the $75 setup add-on and I'll handle it completely.</p>
+        <p>I'll point you to free options like Netlify where you drag-and-drop a folder and you're live in minutes. Or add the $75 setup add-on and I'll handle it for you.</p>
       </div>
       <div class="faq">
         <h4>What if I want changes after delivery?</h4>
@@ -718,7 +575,7 @@ footer a:hover{color:rgba(255,255,255,.55)}
       </div>
       <div class="faq">
         <h4>Can you help me get a domain name?</h4>
-        <p>Absolutely. I can walk you through buying a .com.au and connecting it to your site. It's simpler than it sounds.</p>
+        <p>Absolutely. I can walk you through buying a domain and connecting it to your site. It's simpler than it sounds.</p>
       </div>
     </div>
   </div>
@@ -729,10 +586,16 @@ footer a:hover{color:rgba(255,255,255,.55)}
   <div class="cta-in">
     <div class="cta-ey">Get in touch</div>
     <h2>Let's get your<br>business <em>online.</em></h2>
-    <p>Drop your email below and I'll be in touch within 24 hours. Or reach me directly at hello@dolandigital.com.au</p>
+    <p>Drop your email and I'll be in touch within 24 hours. Or reach me directly at <a href="mailto:amanda.dolan@outlook.com" style="color:var(--orange-m);text-decoration:none;font-weight:500">amanda.dolan@outlook.com</a></p>
     <div class="cta-form">
-      <input type="email" placeholder="your@email.com">
-      <button type="button" onclick="this.textContent='Sent ✓';this.style.background='var(--teal)'">Send me a mockup</button>
+      <input type="email" id="cta-email" placeholder="your@email.com">
+      <button type="button" onclick="
+        var email = document.getElementById('cta-email').value;
+        var subject = encodeURIComponent('Website Mockup Request');
+        var body = encodeURIComponent('Hi Amanda,\n\nI came across Dolan Digital and I\'m interested in a free mockup for my business.\n\nMy email: ' + email + '\n\nLooking forward to hearing from you!');
+        window.location.href = 'mailto:amanda.dolan@outlook.com?subject=' + subject + '&body=' + body;
+        this.textContent='Opening email ✓';this.style.background='var(--blue)';
+      ">Send me a mockup</button>
     </div>
   </div>
 </section>
@@ -741,7 +604,7 @@ footer a:hover{color:rgba(255,255,255,.55)}
 <footer>
   <a href="#" class="flogo">Dolan<em>.</em>Digital</a>
   <p>© 2025 Dolan Digital</p>
-  <a href="mailto:hello@dolandigital.com.au">hello@dolandigital.com.au</a>
+  <a href="mailto:amanda.dolan@outlook.com">amanda.dolan@outlook.com</a>
 </footer>
 
 </body>
